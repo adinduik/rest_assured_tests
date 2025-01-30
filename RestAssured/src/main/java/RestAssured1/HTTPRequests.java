@@ -83,5 +83,20 @@ public class HTTPRequests {
 		
 	}
 	
+	@Test(priority=4, dependsOnMethods= {"updateUser"})
+	void deleteUser() {
+	
+		given()
+		
+		
+		
+		.when()
+			.delete("https://reqres.in/api/users/" +id)
+		
+		
+		.then()
+		.statusCode(204);
+		
+	}
 
 }
